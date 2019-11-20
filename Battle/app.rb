@@ -10,20 +10,20 @@ get '/' do
 end
 
 post '/names' do
-  session[:p1_name] = params[:p1_name]
-  session[:p2_name] = params[:p2_name]
+  $p1_name = Player.new(params[:p1_name])
+  $p2_name = Player.new(params[:p2_name])
   redirect :play
 end
 
 get '/play' do
-  @p1_name = session[:p1_name]
-  @p2_name = session[:p2_name]
+  @p1_name = $p1_name.name
+  @p2_name = $p2_name.name
   erb :play
 end
 
 get '/attack' do
-  @p1_name = session[:p1_name]
-  @p2_name = session[:p2_name]
+  @p1_name = $p1_name.name
+  @p2_name = $p2_name.name
   erb :attack
 end
 

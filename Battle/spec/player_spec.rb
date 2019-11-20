@@ -1,11 +1,11 @@
 require './lib/player'
 
 describe Player do
-  subject(:Jo) { Player.new('Jo') }
+  subject(:jo) { Player.new('Jo') }
 
   describe '#name' do
     it 'returns the name' do
-      expect(dave.name).to eq 'Dave'
+      expect(jo.name).to eq 'Jo'
     end
   end
 end
