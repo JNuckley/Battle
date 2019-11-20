@@ -21,7 +21,11 @@ get '/play' do
   erb :play
 end
 
-
+get '/attack' do
+  @p1_name = session[:p1_name]
+  @p2_name = session[:p2_name]
+  erb :attack
+end
 
 run! if app_file == $0
 end
