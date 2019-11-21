@@ -15,13 +15,13 @@ describe Player do
       expect(jo.hit_points).to eq described_class::DEFAULT_HIT_POINTS
     end
   end
-
-  describe '#attack' do
-    it 'reduces the player hit points' do
-      expect(matt).to receive(:receive_damage)
-      jo.attack(matt)
-    end
-  end
+  #  Attack method is now in the Game class
+  # describe '#attack' do
+  #   it 'reduces the player hit points' do
+  #     expect(matt).to receive(:receive_damage)
+  #     jo.attack(matt)
+  #   end
+  # end
 
   describe '#receive_damage' do
     it 'reduces the player hit points' do

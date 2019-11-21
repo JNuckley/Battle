@@ -16,16 +16,16 @@ post '/names' do
 end
 #assigning p2.hit_points to the instance variable for later use
 get '/play' do
-  # @p1_name = $p1.name
-  # @p2_name = $p2.name
+  @p1_name = $p1.name
+  @p2_name = $p2.name
   @p2_hit_points = $p2.hit_points
   erb :play
 end
 #calling the attack method on the global variable for p1 to attack p2
 get '/attack' do
-  # @p1_name = $p1.name
-  # @p2_name = $p2.name
-  $p1.attack($p2)
+  @p1_name = $p1.name
+  @p2_name = $p2.name
+  Game.new.attack($p2)
   erb :attack
 end
 #this allows programme to be run by just running the app file
