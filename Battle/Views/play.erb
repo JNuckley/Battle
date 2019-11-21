@@ -5,11 +5,16 @@ body {
 </style>
 
 <h1 style = "color: silver;">
-   <%= @p1_name %> vs <%= @p2_name %>
+   <%= $p1.name %> vs. <%= $p2.name %>
+<br>
+<br>
+   <%= $p1.name %>: <%= $p1.hit_points %>HP
+<br>
+   <%= $p2.name %>: <%= $p2.hit_points %>HP
 <br>
 <h2>
-<%= @p2_name %>: 50HP
-<br>
+
+
 
 
   <a href="/attack" style= "color: gray;">Attack</a>
