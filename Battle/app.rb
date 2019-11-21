@@ -33,6 +33,11 @@ get '/attack' do
   @game.attack(@game.p2)
   erb :attack
 end
+
+post '/switch-turns' do
+  $game.switch_turns
+  redirect('/play')
+end
 #this allows programme to be run by just running the app file
 run! if app_file == $0
 end

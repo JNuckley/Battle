@@ -8,8 +8,15 @@ body {
 <!-- This is to colour the text printed from the evaluations below -->
 <h1 style = "color: silver;">
   <!-- These print on the page the global variables with method applied  -->
+<% if @game.current_turn == @game.p1 %>
 <%= @game.p1.name %> attacked <%= @game.p2.name %>
+<% else %>
+<%= @game.p2.name %> attacked <%= @game.p1.name %>
+<% end %>
 <br>
+<%= @game.p1.name %>: <%= @game.p1.hit_points %>HP
 <%= @game.p2.name %>: <%= @game.p2.hit_points %>HP
 
-<a href="/play">OK</a>
+<form action='/switch-turns' method="post">
+  <input type="submit" value="OK">
+</form>

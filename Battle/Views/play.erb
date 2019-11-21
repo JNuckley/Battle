@@ -10,11 +10,16 @@ body {
 <br>
    <%= @game.p1.name %>: <%= @game.p1.hit_points %>HP
 <br>
-   <%= @game.p2.name %>: <%= @game.p2.hit_points %>HP
+<%= @game.p2.name %>: <%= @game.p2.hit_points %>HP
+<br>
+<br>
+   <%= @game.current_turn.name %>'s turn
 <br>
 <h2>
+
 
 <!-- Global variables with methods from the model layer are called on to print to screen -->
 
 <!-- This will put a link on the webpage with the label Attack -->
-  <a href="/attack" style= "color: gray;">Attack</a>
+
+<a href="/attack" style= "color: gray;">Attack</a>
